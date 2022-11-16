@@ -1,2 +1,2 @@
-# amsible-pull
+# ansible-pull
 automating my linux
