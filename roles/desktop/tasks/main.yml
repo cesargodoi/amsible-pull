@@ -1,0 +1,19 @@
+---
+- name: "DESKTOP: 1.1 | Copy wallpaper file ..."
+  copy:
+    src: files/basic-wp.jpg
+    dest: /usr/share/backgrounds/basic-wp.jpg
+    owner: root
+    group: root
+
+- name: "DESKTOP: 1.1 | Set wallpaper ..."
+  become_user: czar
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/basic-wp.jpg'"
+
+- name: "DESKTOP: 1.1 | Adjust wallpaper ..."
+  become_user: czar
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'zoom'"

@@ -1,0 +1,22 @@
+---
+- name: "BASIC: 1.1 | Install dependencies ..."
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: latest
+  loop:
+    - bash
+    - openssl
+    - libssl-dev
+    - libssl-doc
+    - postgresql
+    - postgresql-contrib
+    - libpq-dev
+    - python3-psycopg2
+    - acl
+    - unzip
+    - htop
+    - neofetch
+    - tmux
+    - vim-nox

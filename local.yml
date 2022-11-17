@@ -1,32 +1,36 @@
 ---
-- hosts: localhost
+- name: "<< BASIC CONFIGURATION >>"
+  hosts: localhost
   connection: local
   become: yes
+  roles:
+    - basic
 
-  tasks:
-  - name: install packages
-    package: 
-      name: 
-        - htop
-        - neofetch
-        - tmux
-        - vim-nox
+# - name: "<< DESKTOP CONFIGURATION >>"
+#   hosts: localhost
+#   connection: local
+#   become: yes
+#   roles:
+#     - desktop
+
+# - name: "<< PYTHON CONFIGURATION >>"
+#   hosts: localhost
+#   connection: local
+#   become: yes
+#   roles:
+#     - python
+
+
+# - hosts: localhost
+#   connection: local
+#   become: yes
+
+#   tasks:
+#   - name: install packages
+#     package: 
+#       name: 
+#         - htop
+#         - neofetch
+#         - tmux
+#         - vim-nox
   
-  - name: copy wallpaper file
-    copy:
-      src: files/basic-wp.jpg
-      dest: /usr/share/backgrounds/basic-wp.jpg
-      owner: root
-      group: root
-  
-  - name: set wallpaper
-    become_user: czar
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/basic-wp.jpg'"
-  
-  - name: set wallpaper position
-    become_user: czar
-    dconf:
-      key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
