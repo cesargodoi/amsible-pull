@@ -1,36 +1,9 @@
 ---
-- name: "<< BASIC CONFIGURATION >>"
+- name: "<< MY LINUX CONFIGURATION >>"
   hosts: localhost
   connection: local
   become: yes
   roles:
     - basic
-
-- name: "<< DESKTOP CONFIGURATION >>"
-  hosts: localhost
-  connection: local
-  become: yes
-  roles:
     - desktop
-
-- name: "<< PYTHON CONFIGURATION >>"
-  hosts: localhost
-  connection: local
-  become: yes
-  roles:
     - python
-
-
-# - hosts: localhost
-#   connection: local
-#   become: yes
-
-#   tasks:
-#   - name: install packages
-#     package: 
-#       name: 
-#         - htop
-#         - neofetch
-#         - tmux
-#         - vim-nox
-  
