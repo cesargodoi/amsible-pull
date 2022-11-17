@@ -7,13 +7,8 @@
     state: latest
   loop:
     - bash
-    - openssl
-    - libssl-dev
-    - libssl-doc
-    - postgresql
-    - postgresql-contrib
-    - libpq-dev
-    - python3-psycopg2
+    - openssh-server
+    - python3-psutil
     - acl
     - unzip
     - htop
