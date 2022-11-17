@@ -6,19 +6,19 @@
   roles:
     - basic
 
-# - name: "<< DESKTOP CONFIGURATION >>"
-#   hosts: localhost
-#   connection: local
-#   become: yes
-#   roles:
-#     - desktop
+- name: "<< DESKTOP CONFIGURATION >>"
+  hosts: localhost
+  connection: local
+  become: yes
+  roles:
+    - desktop
 
-# - name: "<< PYTHON CONFIGURATION >>"
-#   hosts: localhost
-#   connection: local
-#   become: yes
-#   roles:
-#     - python
+- name: "<< PYTHON CONFIGURATION >>"
+  hosts: localhost
+  connection: local
+  become: yes
+  roles:
+    - python
 
 
 # - hosts: localhost
